@@ -1,0 +1,41 @@
+# Terraform working data and secrets; commit the provider lock file.
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+*.tfplan
+*.plan
+crash.log
+crash.*.log
+*.tfvars
+*.tfvars.json
+!terraform.tfvars.example
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraformrc
+terraform.rc
+# Credentials and exported evidence can contain account/resource identifiers.
+.aws/
+.env
+.env.*
+!.env.example
+*credentials*
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.cer
+id_rsa*
+id_ed25519*
+evidence/
+# Editor and OS artifacts
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+__pycache__/
+

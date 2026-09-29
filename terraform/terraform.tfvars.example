@@ -1,0 +1,16 @@
+# Copy to terraform.tfvars (ignored); never put real credentials in this example.
+aws_region          = "us-east-2"
+project_name        = "private-rds-ssm"
+vpc_cidr            = "10.42.0.0/16"
+private_subnet_cidrs = ["10.42.1.0/24", "10.42.2.0/24"]
+ec2_instance_type   = "t3.micro" # x86_64
+rds_instance_class  = "db.t3.micro"
+rds_engine_version  = "8.4" # Check class/version availability in your sandbox Region.
+database_name       = "labdb"
+database_username   = "labadmin"
+# Supply database_password via Terraform's hidden prompt or TF_VAR_database_password.
+# ami_id = "ami-REPLACE_WITH_APPROVED_AL2023_IMAGE" # Optional pin after review.
+rds_allocated_storage       = 20
+rds_multi_az                = false
+rds_backup_retention_period = 0
+enable_flow_logs            = false
